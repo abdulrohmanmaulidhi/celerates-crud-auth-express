@@ -2,6 +2,14 @@
 
 A secure, full-featured Express.js API with user authentication and CRUD operations for managing data items. Built with PostgreSQL, JWT for authentication, and bcrypt for password encryption.
 
+---
+
+## Frontend Repository
+
+[-- Frontend Repository --](https://github.com/abdulrohmanmaulidhi/celerates-crud-auth-react)
+
+---
+
 ## 🌟 Features
 
 - **User Authentication**: Secure registration and login system
@@ -68,10 +76,11 @@ A secure, full-featured Express.js API with user authentication and CRUD operati
 5. **Run the application**
 
    - For development (with auto-restart on changes):
+
      ```bash
      npm run dev
      ```
-   
+
    - For production:
      ```bash
      npm start
@@ -82,6 +91,7 @@ A secure, full-featured Express.js API with user authentication and CRUD operati
 The application automatically creates two tables:
 
 ### Users Table
+
 ```sql
 - id: SERIAL PRIMARY KEY
 - name: VARCHAR(255) NOT NULL
@@ -91,6 +101,7 @@ The application automatically creates two tables:
 ```
 
 ### Items Table
+
 ```sql
 - id: SERIAL PRIMARY KEY
 - title: VARCHAR(255) NOT NULL
@@ -104,6 +115,7 @@ The application automatically creates two tables:
 ### Authentication Routes (`/api/auth`)
 
 - **POST `/api/auth/register`** - User Registration
+
   - Request Body: `{ "name": "John Doe", "email": "john@example.com", "password": "securepassword" }`
   - Response: `{ "id": 1, "name": "John Doe", "email": "john@example.com", "token": "jwt_token" }`
 
@@ -111,24 +123,29 @@ The application automatically creates two tables:
   - Request Body: `{ "email": "john@example.com", "password": "securepassword" }`
   - Response: `{ "id": 1, "name": "John Doe", "email": "john@example.com", "token": "jwt_token" }`
 
-### Items Routes (`/api/items`) - *Requires Authentication*
+### Items Routes (`/api/items`)
 
 All items routes require a valid JWT token in the Authorization header:
+
 ```
 Authorization: Bearer <jwt_token>
 ```
 
 - **GET `/api/items`** - Get all items
+
   - Response: Array of all items
 
 - **GET `/api/items/:id`** - Get a specific item by ID
+
   - Response: Single item object
 
 - **POST `/api/items`** - Create a new item
+
   - Request Body: `{ "title": "Item Title", "description": "Item Description" }`
   - Response: Created item object
 
 - **PUT `/api/items/:id`** - Update an existing item
+
   - Request Body: `{ "title": "Updated Title", "description": "Updated Description" }`
   - Response: Updated item object
 
