@@ -6,7 +6,7 @@ A secure, full-featured Express.js API with user authentication and CRUD operati
 
 ## Frontend Repository
 
-[-- Frontend Repository --](https://github.com/abdulrohmanmaulidhi/celerates-crud-auth-react)
+[Frontend Repository](https://github.com/abdulrohmanmaulidhi/celerates-crud-auth-react)
 
 ---
 
