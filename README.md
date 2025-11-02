@@ -39,7 +39,7 @@ A secure, full-featured Express.js API with user authentication and CRUD operati
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/abdulrohmanmaulidhi/celerates-crud-auth-express
    cd crud-auth-express
    ```
 
