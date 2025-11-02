@@ -1,4 +1,4 @@
-import { client } from '../server.js';
+import { client } from "../config/db.js";
 
 const initializeDatabase = async () => {
   try {
@@ -24,9 +24,9 @@ const initializeDatabase = async () => {
       )
     `);
 
-    console.log('Database tables created successfully');
+    console.log("Database tables created successfully");
   } catch (error) {
-    console.error('Error initializing database:', error);
+    console.error("Error initializing database:", error);
   }
 };
 
