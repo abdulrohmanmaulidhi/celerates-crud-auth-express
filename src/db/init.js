@@ -15,7 +15,7 @@ const initializeDatabase = async () => {
 
     // Membuat tabel data jika belum ada
     await client.query(`
-      CREATE TABLE IF NOT EXISTS data (
+      CREATE TABLE IF NOT EXISTS items (
         id SERIAL PRIMARY KEY,
         title VARCHAR(255) NOT NULL,
         description TEXT,
